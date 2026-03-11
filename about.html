@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li><a href="shop.html" id="nav-shop">Collections</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon"><i class="fas fa-search"></i></button>
+      <button class="nav-icon"><i class="far fa-heart"></i></button>
+      <button class="nav-icon cart-icon-btn" onclick="toggleCart()">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- ABOUT HERO -->
+<div class="about-hero">
+  <div>
+    <div class="section-tag" style="color:var(--gold);">Est. 2019</div>
+    <h1>Our <em>Story</em></h1>
+  </div>
+</div>
+
+<!-- BRAND STORY -->
+<div class="about-story">
+  <div class="about-img">
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80" alt="About Maison Reine" loading="lazy">
+  </div>
+  <div class="about-content">
+    <div class="section-tag">Our Beginning</div>
+    <h2 class="section-title" style="text-align:left;">Born from a Passion for <em style="font-style:italic;">Excellence</em></h2>
+    <div class="gold-line-left"></div>
+    <p class="about-text">Maison Reine was founded with one belief: every woman deserves to feel like royalty. Starting from a small atelier in Mumbai, we have grown into one of India's most respected luxury fashion houses, serving thousands of discerning women across the country.</p>
+    <p class="about-text" style="margin-top:16px;">Our collections blend the rich heritage of Indian craftsmanship with contemporary silhouettes, creating pieces that are timeless yet relevant — perfect for the modern woman who honors tradition while embracing today.</p>
+    <a href="shop.html" class="btn btn-gold" style="margin-top:32px;">Explore Collections</a>
+  </div>
+</div>
+
+<!-- STATISTICS -->
+<section style="background:var(--black);padding:60px;">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto;text-align:center;">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;">50K+</div>
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,250,248,.5);font-weight:500;">Happy Customers</div>
+    </div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;">500+</div>
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,250,248,.5);font-weight:500;">Unique Designs</div>
+    </div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;">6+</div>
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,250,248,.5);font-weight:500;">Years of Excellence</div>
+    </div>
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:var(--gold);font-weight:300;">100%</div>
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,250,248,.5);font-weight:500;">Authentic Products</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">What We Stand For</div>
+      <h2 class="section-title">Our Philosophy</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up delay-1">
+        <div class="value-icon"><i class="fas fa-gem"></i></div>
+        <h3>Uncompromising Quality</h3>
+        <p>We source only the finest fabrics and materials from trusted artisans. Every stitch, every seam meets our exacting standards before it reaches you.</p>
+      </div>
+      <div class="value-card fade-up delay-2">
+        <div class="value-icon"><i class="fas fa-leaf"></i></div>
+        <h3>Sustainable Luxury</h3>
+        <p>Fashion with a conscience. We're committed to ethical production and minimizing our environmental footprint — because true luxury respects the planet.</p>
+      </div>
+      <div class="value-card fade-up delay-3">
+        <div class="value-icon"><i class="fas fa-heart"></i></div>
+        <h3>Made with Love</h3>
+        <p>Every collection is a labor of love. From the initial sketch to the final embellishment, our artisans pour their hearts into every piece they create.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOSHOOT IMAGES -->
+<section style="display:grid;grid-template-columns:repeat(3,1fr);height:500px;">
+  <div style="overflow:hidden;">
+    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Fashion" style="width:100%;height:100%;object-fit:cover;transition:transform .7s;filter:brightness(.85);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+  <div style="overflow:hidden;">
+    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80" alt="Fashion" style="width:100%;height:100%;object-fit:cover;transition:transform .7s;filter:brightness(.85);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+  <div style="overflow:hidden;">
+    <img src="https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=600&q=80" alt="Fashion" style="width:100%;height:100%;object-fit:cover;transition:transform .7s;filter:brightness(.85);" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Meet the Visionaries</div>
+      <h2 class="section-title">Our Creative Team</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card fade-up delay-1">
+        <img class="team-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Team">
+        <div class="team-name">Aanya Malhotra</div>
+        <div class="team-role">Founder & Creative Director</div>
+      </div>
+      <div class="team-card fade-up delay-2">
+        <img class="team-img" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Team">
+        <div class="team-name">Riya Bose</div>
+        <div class="team-role">Head of Design</div>
+      </div>
+      <div class="team-card fade-up delay-3">
+        <img class="team-img" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Team">
+        <div class="team-name">Kavya Iyer</div>
+        <div class="team-role">Fashion Curator</div>
+      </div>
+      <div class="team-card fade-up delay-3">
+        <img class="team-img" src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80" alt="Team">
+        <div class="team-name">Ishaan Mehta</div>
+        <div class="team-role">Head of Operations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section newsletter-section">
+  <div class="newsletter-glow"></div>
+  <div style="position:relative;">
+    <div class="section-tag">Exclusive Access</div>
+    <h2 class="section-title">Join Our World</h2>
+    <p class="section-sub" style="margin-top:10px;">Be the first to know about new collections and private events.</p>
+    <div class="newsletter-form">
+      <input id="newsletterEmail" type="email" class="newsletter-input" placeholder="Your email address">
+      <button class="btn btn-gold" onclick="subscribeNewsletter('newsletterEmail')">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">MAISON <span>REINE</span></a>
+      <p class="footer-desc">Luxury fashion that honors your individuality.</p>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Collections</h5><a href="shop.html?cat=kurti">Kurtis</a><a href="shop.html?cat=saree">Sarees</a><a href="shop.html?cat=western">Western</a></div>
+    <div class="footer-col"><h5>Information</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h5>Customer Care</h5><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQ</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison Reine. All rights reserved.</span>
+    <div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div class="cart-title">Shopping Bag <span id="cartItemCount">(0)</span></div>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBodyEl"></div>
+  <div class="cart-foot">
+    <div class="cart-row-total"><span>Total</span><span id="cartTotalEl">₹0</span></div>
+    <span id="cartSubtotalEl" style="display:none;"></span>
+    <a href="pages/checkout.html" class="btn btn-gold btn-full" style="margin-bottom:10px;">Checkout</a>
+    <button class="btn btn-outline btn-full" onclick="toggleCart()">Continue</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

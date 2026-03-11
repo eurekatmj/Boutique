@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../shop.html">Collections</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="openMobileMenu()"><i class="fas fa-search"></i></button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="../index.html">Home</a>
+  <a href="../shop.html">Collections</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<section class="auth-section">
+  <div class="auth-box">
+    <div class="auth-logo">MAISON <span>REINE</span></div>
+    <p class="auth-sub">Sign in to your account</p>
+
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="email" class="form-input" placeholder="priya@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Password</label>
+      <div style="position:relative;">
+        <input type="password" class="form-input" placeholder="••••••••" id="pwdInput" style="padding-right:44px;">
+        <button onclick="togglePwd()" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--warm-gray);font-size:14px;"><i class="fas fa-eye" id="pwdIcon"></i></button>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+      <label style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--warm-gray);cursor:pointer;">
+        <input type="checkbox" style="accent-color:var(--gold);"> Remember me
+      </label>
+      <a href="#" style="font-size:12px;color:var(--gold);font-weight:600;">Forgot password?</a>
+    </div>
+    <button class="btn btn-gold btn-full" onclick="handleLogin()">Sign In</button>
+
+    <div class="auth-divider"><span>or continue with</span></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <button class="btn btn-outline" style="padding:12px;font-size:11px;gap:8px;"><i class="fab fa-google" style="color:#DB4437;"></i> Google</button>
+      <button class="btn btn-outline" style="padding:12px;font-size:11px;gap:8px;"><i class="fab fa-facebook-f" style="color:#4267B2;"></i> Facebook</button>
+    </div>
+
+    <p class="auth-link">Don't have an account? <a href="signup.html">Create one</a></p>
+  </div>
+</section>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="../js/products.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/script.js"></script>
+<script>
+function togglePwd() {
+  const input = document.getElementById('pwdInput');
+  const icon  = document.getElementById('pwdIcon');
+  if (input.type === 'password') { input.type = 'text'; icon.className = 'fas fa-eye-slash'; }
+  else { input.type = 'password'; icon.className = 'fas fa-eye'; }
+}
+function handleLogin() {
+  showToast('Signed in successfully! Welcome back.');
+  setTimeout(() => window.location.href = '../index.html', 1500);
+}
+</script>
+</body>
+</html>

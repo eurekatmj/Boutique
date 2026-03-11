@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li><a href="shop.html" id="nav-shop">Collections</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon"><i class="fas fa-search"></i></button>
+      <button class="nav-icon"><i class="far fa-heart"></i></button>
+      <button class="nav-icon cart-icon-btn" onclick="toggleCart()">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div>
+    <div class="breadcrumb">Home &rsaquo; <span>Contact</span></div>
+    <h1>Get in <em>Touch</em></h1>
+  </div>
+</div>
+
+<!-- CONTACT LAYOUT -->
+<div class="contact-layout">
+  <!-- INFO -->
+  <div class="contact-info">
+    <div class="section-tag">We'd Love to Hear From You</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--black);line-height:1.1;margin-top:8px;">Let's <em style="font-style:italic;">Connect</em></h2>
+    <div class="gold-line-left"></div>
+    <div class="contact-details">
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <div class="contact-dtitle">Our Store</div>
+          <div class="contact-dtext">12, Luxury Lane, Bandra West<br>Mumbai, Maharashtra 400050</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <div class="contact-dtitle">Phone</div>
+          <div class="contact-dtext">+91 98765 43210<br><span style="font-size:12px;color:var(--warm-gray);">Mon – Sat, 10am – 7pm</span></div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <div class="contact-dtitle">Email</div>
+          <div class="contact-dtext">hello@maisonreine.in<br>support@maisonreine.in</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+        <div>
+          <div class="contact-dtitle">Store Hours</div>
+          <div class="contact-dtext">Monday – Saturday: 10am – 8pm<br>Sunday: 11am – 6pm</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;">
+      <div class="contact-dtitle" style="margin-bottom:16px;">Follow Us</div>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="contact-form-wrap">
+    <div class="section-tag">Send a Message</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--black);margin-bottom:32px;">We'll respond within 24 hours</h2>
+    <div style="max-width:480px;">
+      <div class="form-group">
+        <label class="form-label">Your Name *</label>
+        <input type="text" class="form-input" placeholder="Priya Sharma" id="contactName">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address *</label>
+        <input type="email" class="form-input" placeholder="priya@email.com" id="contactEmail">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-input" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <input type="text" class="form-input" placeholder="Order inquiry, feedback...">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message *</label>
+        <textarea class="form-textarea" placeholder="Tell us how we can help you..."></textarea>
+      </div>
+      <button class="btn btn-gold" onclick="submitContact()">Send Message <i class="fas fa-paper-plane" style="margin-left:8px;"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- MAP SECTION -->
+<div class="map-section">
+  <div class="map-grid"></div>
+  <div class="map-placeholder">
+    <i class="fas fa-map-marked-alt"></i>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--black);margin-bottom:6px;">Maison Reine Mumbai</p>
+    <p>12 Luxury Lane, Bandra West, Mumbai 400050</p>
+    <a href="https://maps.google.com" target="_blank" class="btn btn-gold btn-sm" style="margin-top:16px;">Open in Maps</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Common Questions</div>
+      <h2 class="section-title">Frequently Asked</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:2px;">
+      <details style="background:var(--white);padding:20px 24px;cursor:pointer;">
+        <summary style="font-size:15px;font-weight:600;color:var(--black);letter-spacing:.3px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How long does shipping take? <i class="fas fa-chevron-down" style="color:var(--gold);font-size:12px;"></i>
+        </summary>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.9;margin-top:12px;">Standard delivery takes 5-7 business days across India. Express delivery (2-3 days) is available for select pin codes. Free shipping on orders above ₹2999.</p>
+      </details>
+      <details style="background:var(--white);padding:20px 24px;cursor:pointer;">
+        <summary style="font-size:15px;font-weight:600;color:var(--black);letter-spacing:.3px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What is your return policy? <i class="fas fa-chevron-down" style="color:var(--gold);font-size:12px;"></i>
+        </summary>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.9;margin-top:12px;">We offer easy 30-day returns on all items in original condition with tags attached. Simply initiate a return through your account or contact our support team.</p>
+      </details>
+      <details style="background:var(--white);padding:20px 24px;cursor:pointer;">
+        <summary style="font-size:15px;font-weight:600;color:var(--black);letter-spacing:.3px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          How can I track my order? <i class="fas fa-chevron-down" style="color:var(--gold);font-size:12px;"></i>
+        </summary>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.9;margin-top:12px;">Once your order is shipped, you'll receive a tracking link via email and SMS. You can also track your order through the 'My Orders' section in your account.</p>
+      </details>
+      <details style="background:var(--white);padding:20px 24px;cursor:pointer;">
+        <summary style="font-size:15px;font-weight:600;color:var(--black);letter-spacing:.3px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Are the products authentic? <i class="fas fa-chevron-down" style="color:var(--gold);font-size:12px;"></i>
+        </summary>
+        <p style="font-size:13px;color:var(--warm-gray);line-height:1.9;margin-top:12px;">Absolutely. Every product at Maison Reine is 100% authentic and handpicked by our curation team. We work directly with certified artisans and established manufacturers.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">MAISON <span>REINE</span></a>
+      <p class="footer-desc">Luxury fashion that honors your individuality. Crafted with passion, designed for the modern woman.</p>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Collections</h5><a href="shop.html?cat=kurti">Kurtis</a><a href="shop.html?cat=saree">Sarees</a><a href="shop.html?cat=western">Western</a></div>
+    <div class="footer-col"><h5>Information</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h5>Customer Care</h5><a href="#">Shipping</a><a href="#">Returns</a><a href="#">FAQ</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison Reine. All rights reserved.</span>
+    <div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i><i class="fab fa-google-pay"></i></div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div class="cart-title">Shopping Bag <span id="cartItemCount">(0)</span></div>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBodyEl"></div>
+  <div class="cart-foot">
+    <div class="cart-row-total"><span>Total</span><span id="cartTotalEl">₹0</span></div>
+    <span id="cartSubtotalEl" style="display:none;"></span>
+    <a href="pages/checkout.html" class="btn btn-gold btn-full" style="margin-bottom:10px;">Checkout</a>
+    <button class="btn btn-outline btn-full" onclick="toggleCart()">Continue</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

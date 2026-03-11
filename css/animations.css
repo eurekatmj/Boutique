@@ -1,0 +1,104 @@
+/* ============================================================
+   MAISON REINE — Animations Stylesheet
+   animations.css
+============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeDown {
+  from { opacity:0; transform:translateX(-50%) translateY(-10px); }
+  to   { opacity:1; transform:translateX(-50%) translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+
+@keyframes modalIn {
+  from { opacity:0; transform:scale(.94); }
+  to   { opacity:1; transform:scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity:0; transform:translateX(20px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+
+@keyframes marquee {
+  0%   { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
+@keyframes scrollPulse {
+  0%,100% { opacity:.3; width:40px; }
+  50%      { opacity:1;  width:60px; }
+}
+
+@keyframes spinIn {
+  from { opacity:0; transform:rotate(-10deg) scale(.9); }
+  to   { opacity:1; transform:rotate(0)      scale(1);  }
+}
+
+@keyframes heartBeat {
+  0%   { transform:scale(1); }
+  25%  { transform:scale(1.2); }
+  50%  { transform:scale(1); }
+  75%  { transform:scale(1.1); }
+  100% { transform:scale(1); }
+}
+
+/* ── Hero scroll indicator ─────────────────────────────── */
+.scroll-line { animation:scrollPulse 2s ease-in-out infinite; }
+
+/* ── Staggered reveal ──────────────────────────────────── */
+.stagger > *:nth-child(1) { transition-delay:.05s; }
+.stagger > *:nth-child(2) { transition-delay:.12s; }
+.stagger > *:nth-child(3) { transition-delay:.19s; }
+.stagger > *:nth-child(4) { transition-delay:.26s; }
+.stagger > *:nth-child(5) { transition-delay:.33s; }
+.stagger > *:nth-child(6) { transition-delay:.40s; }
+.stagger > *:nth-child(7) { transition-delay:.47s; }
+.stagger > *:nth-child(8) { transition-delay:.54s; }
+
+/* ── Page load hero text ───────────────────────────────── */
+.hero-content > * {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeDown 0s forwards;
+}
+.hero-tag  { animation:slideIn .8s .2s ease both; }
+.hero h1   { animation:slideIn .8s .4s ease both; }
+.hero-sub  { animation:slideIn .8s .6s ease both; }
+.hero-ctas { animation:slideIn .8s .8s ease both; }
+
+/* ── Hover micro-interactions ──────────────────────────── */
+.action-btn.wishlisted  { animation:heartBeat .5s ease; }
+
+/* ── Shimmer skeleton loading ──────────────────────────── */
+.skeleton {
+  background:linear-gradient(90deg, var(--beige) 25%, var(--cream) 50%, var(--beige) 75%);
+  background-size:200% 100%;
+  animation:shimmer 1.6s infinite;
+  border-radius:2px;
+}
+
+@keyframes shimmer {
+  0%   { background-position:200% 0; }
+  100% { background-position:-200% 0; }
+}
+
+/* ── Smooth page transitions ───────────────────────────── */
+.page-fade-in  { animation:fadeIn .4s ease both; }
+
+/* ── Ripple on button click ────────────────────────────── */
+.btn { position:relative; overflow:hidden; }
+.ripple {
+  position:absolute; border-radius:50%;
+  background:rgba(255,255,255,.25);
+  transform:scale(0);
+  animation:ripple .6s linear;
+  pointer-events:none;
+}
+@keyframes ripple {
+  to { transform:scale(4); opacity:0; }
+}

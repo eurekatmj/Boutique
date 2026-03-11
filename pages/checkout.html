@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ Secure Checkout — SSL Encrypted ✦</div>
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">MAISON <span>REINE</span></a>
+    <div style="display:flex;align-items:center;gap:20px;font-size:12px;color:var(--warm-gray);">
+      <span style="display:flex;align-items:center;gap:6px;"><i class="fas fa-lock" style="color:var(--gold);"></i> Secure Checkout</span>
+      <a href="cart.html" style="color:var(--warm-gray);font-size:12px;">← Back to Cart</a>
+    </div>
+  </div>
+</nav>
+
+<div class="checkout-layout">
+  <!-- FORM -->
+  <div>
+    <!-- PROGRESS -->
+    <div style="display:flex;align-items:center;gap:0;margin-bottom:40px;">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--white);">1</div>
+        <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);font-weight:600;">Shipping</span>
+      </div>
+      <div style="flex:1;height:1px;background:var(--beige);margin:0 16px;"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:var(--beige);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--warm-gray);">2</div>
+        <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--warm-gray);font-weight:600;">Payment</span>
+      </div>
+      <div style="flex:1;height:1px;background:var(--beige);margin:0 16px;"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div style="width:28px;height:28px;background:var(--beige);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--warm-gray);">3</div>
+        <span style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--warm-gray);font-weight:600;">Confirm</span>
+      </div>
+    </div>
+
+    <!-- SHIPPING -->
+    <div class="checkout-step">
+      <div class="checkout-step-title">Shipping Information</div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Priya"></div>
+        <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Sharma"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="priya@email.com"></div>
+      <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 98765 43210"></div>
+      <div class="form-group"><label class="form-label">Address Line 1</label><input type="text" class="form-input" placeholder="House / Flat No., Street Name"></div>
+      <div class="form-group"><label class="form-label">Address Line 2</label><input type="text" class="form-input" placeholder="Area, Locality (Optional)"></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input" placeholder="Mumbai"></div>
+        <div class="form-group"><label class="form-label">State</label>
+          <select class="form-input" style="appearance:none;">
+            <option>Maharashtra</option><option>Delhi</option><option>Karnataka</option><option>Tamil Nadu</option><option>Gujarat</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">PIN Code</label><input type="text" class="form-input" placeholder="400050"></div>
+        <div class="form-group"><label class="form-label">Country</label><input type="text" class="form-input" value="India" readonly style="background:var(--beige);"></div>
+      </div>
+    </div>
+
+    <!-- SHIPPING METHOD -->
+    <div class="checkout-step">
+      <div class="checkout-step-title">Delivery Method</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <label style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:2px solid var(--gold);cursor:pointer;background:rgba(201,169,110,.04);">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <input type="radio" name="delivery" checked style="accent-color:var(--gold);">
+            <div>
+              <div style="font-size:13px;font-weight:600;">Standard Delivery</div>
+              <div style="font-size:11px;color:var(--warm-gray);margin-top:2px;">5–7 business days</div>
+            </div>
+          </div>
+          <span style="font-size:14px;font-weight:700;color:#27ae60;">FREE</span>
+        </label>
+        <label style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border:1px solid var(--beige);cursor:pointer;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <input type="radio" name="delivery" style="accent-color:var(--gold);">
+            <div>
+              <div style="font-size:13px;font-weight:600;">Express Delivery</div>
+              <div style="font-size:11px;color:var(--warm-gray);margin-top:2px;">2–3 business days</div>
+            </div>
+          </div>
+          <span style="font-size:14px;font-weight:700;">₹199</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="checkout-step">
+      <div class="checkout-step-title">Payment Details</div>
+      <div style="display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap;">
+        <label style="display:flex;align-items:center;gap:6px;padding:10px 16px;border:2px solid var(--gold);cursor:pointer;font-size:12px;font-weight:600;background:rgba(201,169,110,.04);">
+          <input type="radio" name="payment" checked style="accent-color:var(--gold);"> Card
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid var(--beige);cursor:pointer;font-size:12px;font-weight:600;">
+          <input type="radio" name="payment" style="accent-color:var(--gold);"> UPI
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid var(--beige);cursor:pointer;font-size:12px;font-weight:600;">
+          <input type="radio" name="payment" style="accent-color:var(--gold);"> Net Banking
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;padding:10px 16px;border:1px solid var(--beige);cursor:pointer;font-size:12px;font-weight:600;">
+          <input type="radio" name="payment" style="accent-color:var(--gold);"> COD
+        </label>
+      </div>
+      <div class="form-group"><label class="form-label">Card Number</label><input type="text" class="form-input" placeholder="1234 5678 9012 3456"></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Expiry Date</label><input type="text" class="form-input" placeholder="MM / YY"></div>
+        <div class="form-group"><label class="form-label">CVV</label><input type="text" class="form-input" placeholder="•••"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Name on Card</label><input type="text" class="form-input" placeholder="PRIYA SHARMA"></div>
+    </div>
+
+    <button class="btn btn-gold" style="width:100%;padding:18px;font-size:13px;" onclick="placeOrder()">
+      <i class="fas fa-lock" style="margin-right:10px;"></i>Place Order Securely
+    </button>
+    <p style="text-align:center;font-size:11px;color:var(--warm-gray);margin-top:12px;"><i class="fas fa-shield-alt" style="color:var(--gold);margin-right:4px;"></i>Your payment info is encrypted with SSL</p>
+  </div>
+
+  <!-- ORDER SUMMARY -->
+  <div class="checkout-summary">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;margin-bottom:20px;">Order Summary</h3>
+    <div id="checkoutItems"></div>
+    <div style="height:1px;background:var(--beige);margin:20px 0;"></div>
+    <div class="order-row"><span>Subtotal</span><span id="coSubtotal">₹0</span></div>
+    <div class="order-row"><span>Shipping</span><span style="color:#27ae60;">Free</span></div>
+    <div class="order-row"><span>GST (5%)</span><span id="coTax">₹0</span></div>
+    <div class="order-total" style="margin-top:16px;padding-top:16px;border-top:1px solid var(--beige);">
+      <span>Total</span><span id="coTotal">₹0</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="../js/products.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.getElementById('checkoutItems');
+  if (cart.length === 0) {
+    items.innerHTML = '<p style="color:var(--warm-gray);font-size:13px;">No items in cart.</p>';
+  } else {
+    items.innerHTML = cart.map(c => `
+      <div class="checkout-item">
+        <img src="${c.img}" alt="${c.name}">
+        <div style="flex:1;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;">${c.name}</div>
+          <div style="font-size:11px;color:var(--warm-gray);margin-top:4px;">Size: ${c.size} · Qty: ${c.qty}</div>
+        </div>
+        <div style="font-weight:700;font-size:14px;">₹${(c.price*c.qty).toLocaleString()}</div>
+      </div>`).join('');
+  }
+  const sub = getCartTotal();
+  const tax = Math.round(sub * 0.05);
+  document.getElementById('coSubtotal').textContent = `₹${sub.toLocaleString()}`;
+  document.getElementById('coTax').textContent = `₹${tax.toLocaleString()}`;
+  document.getElementById('coTotal').textContent = `₹${(sub+tax).toLocaleString()}`;
+});
+
+function placeOrder() {
+  clearCart();
+  showToast('Order placed successfully! 🎉 Thank you!');
+  setTimeout(() => window.location.href = '../index.html', 2000);
+}
+</script>
+</body>
+</html>

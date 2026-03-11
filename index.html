@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAISON REINE — Luxury Fashion</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li>
+        <a href="shop.html" id="nav-shop">Collections</a>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <h4>Women</h4>
+            <a href="shop.html?cat=kurti">Kurtis</a>
+            <a href="shop.html?cat=saree">Sarees</a>
+            <a href="shop.html?cat=western">Western Wear</a>
+            <a href="shop.html">All Women</a>
+          </div>
+          <div class="mega-col">
+            <h4>Men</h4>
+            <a href="shop.html">Formal Shirts</a>
+            <a href="shop.html">Ethnic Wear</a>
+            <a href="shop.html">Casual Wear</a>
+            <a href="shop.html">Accessories</a>
+          </div>
+          <div class="mega-col">
+            <h4>Trending</h4>
+            <a href="shop.html">New Arrivals</a>
+            <a href="shop.html">Best Sellers</a>
+            <a href="shop.html">Sale Items</a>
+            <a href="shop.html">Gift Sets</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="showToast('Search coming soon!')" title="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-icon" title="Wishlist"><i class="far fa-heart"></i></button>
+      <button class="nav-icon cart-icon-btn" onclick="toggleCart()" title="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="pages/cart.html">Cart</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-tag">New Collection 2026</div>
+    <h1>Wear the <em>Elegance</em> You Deserve</h1>
+    <p class="hero-sub">Curated luxury fashion for the modern woman. Discover handcrafted pieces that define your story.</p>
+    <div class="hero-ctas">
+      <a href="shop.html" class="btn btn-gold">Shop Now</a>
+      <a href="about.html" class="btn btn-outline-gold">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-grid">
+      <div class="hero-cell" style="grid-column:1;grid-row:1/3;">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80" alt="Fashion">
+        <div class="hero-cell-overlay"></div>
+      </div>
+      <div class="hero-cell">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400&q=80" alt="Fashion">
+      </div>
+      <div class="hero-cell">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&q=80" alt="Fashion">
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll to Explore
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item"><span>New Arrivals 2026</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Premium Fabrics</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Free Shipping ₹2999+</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Handcrafted Luxury</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Exclusive Designs</span><div class="marquee-dot"></div></div>
+    <div class="marquee-item"><span>Easy Returns</span><div class="marquee-dot"></div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Shop by Category</div>
+      <h2 class="section-title">Discover Your Style</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="categories-grid stagger">
+      <a href="shop.html?cat=kurti" class="cat-card fade-up delay-1">
+        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=80" alt="Kurtis" loading="lazy">
+        <div class="cat-overlay">
+          <div class="cat-label">Collection</div>
+          <div class="cat-name">Kurtis</div>
+          <div class="cat-cta">Shop Now <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+      <a href="shop.html?cat=saree" class="cat-card fade-up delay-2">
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500&q=80" alt="Sarees" loading="lazy">
+        <div class="cat-overlay">
+          <div class="cat-label">Collection</div>
+          <div class="cat-name">Sarees</div>
+          <div class="cat-cta">Shop Now <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+      <a href="shop.html?cat=western" class="cat-card fade-up delay-3">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&q=80" alt="Western" loading="lazy">
+        <div class="cat-overlay">
+          <div class="cat-label">Collection</div>
+          <div class="cat-name">Western</div>
+          <div class="cat-cta">Shop Now <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+      <a href="shop.html" class="cat-card fade-up delay-3">
+        <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?w=500&q=80" alt="Accessories" loading="lazy">
+        <div class="cat-overlay">
+          <div class="cat-label">Collection</div>
+          <div class="cat-name">Accessories</div>
+          <div class="cat-cta">Shop Now <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING -->
+<section class="section" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Handpicked for You</div>
+      <h2 class="section-title">Trending Now</h2>
+      <p class="section-sub">Our most-loved pieces of the season</p>
+      <div class="gold-line"></div>
+    </div>
+    <div class="grid-auto stagger" id="trendingGrid"></div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="shop.html" class="btn btn-outline">View All Collections</a>
+    </div>
+  </div>
+</section>
+
+<!-- EDITORIAL -->
+<section class="editorial-section">
+  <div class="editorial-img">
+    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80" alt="Bridal" loading="lazy">
+  </div>
+  <div class="editorial-body">
+    <div class="section-tag fade-up">Limited Edition</div>
+    <h2 class="section-title fade-up" style="text-align:left;font-size:48px;">The Bridal <em style="font-style:italic;color:var(--gold-dark)">Couture</em> Edit</h2>
+    <p class="editorial-text fade-up">Step into a world of unmatched elegance with our exclusive bridal collection. Each piece is a labor of love — embroidered, embellished, and crafted to perfection for the most important chapter of your life.</p>
+    <a href="shop.html?cat=saree" class="btn btn-gold fade-up">Explore Collection</a>
+  </div>
+</section>
+
+<!-- BESTSELLERS CAROUSEL -->
+<section class="carousel-section">
+  <div class="carousel-inner-header">
+    <div class="section-tag">Most Popular</div>
+    <h2 class="section-title">Best Sellers</h2>
+    <p class="section-sub">The pieces everyone is talking about</p>
+    <div class="gold-line-left"></div>
+  </div>
+  <div class="carousel-track" id="carouselTrack"></div>
+  <div class="carousel-nav">
+    <button class="carousel-btn" onclick="scrollCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-btn" onclick="scrollCarousel(1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" style="background:var(--white);">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-tag">Customer Stories</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up delay-1">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <div class="review-quote">"</div>
+        <p class="review-text">Absolutely stunning quality. The saree I ordered was beyond my expectations — the fabric, embroidery, everything is exquisite.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--gold-light);color:var(--gold-dark);">P</div>
+          <div><div class="review-name">Priya Sharma</div><div class="review-loc">Mumbai, India</div></div>
+        </div>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <div class="review-quote">"</div>
+        <p class="review-text">The kurti collection is unlike anything I've seen. Maison Reine truly understands luxury — classic yet contemporary.</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#e8d5e8;color:#7b3f7b;">A</div>
+          <div><div class="review-name">Ananya Reddy</div><div class="review-loc">Hyderabad, India</div></div>
+        </div>
+      </div>
+      <div class="review-card fade-up delay-3">
+        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+        <div class="review-quote">"</div>
+        <p class="review-text">I wore the evening gown to a gala and received so many compliments. The craftsmanship is impeccable. A true luxury brand!</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:#d5e8e0;color:#2d6a4f;">M</div>
+          <div><div class="review-name">Meera Kapoor</div><div class="review-loc">Delhi, India</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section newsletter-section">
+  <div class="newsletter-glow"></div>
+  <div style="position:relative;">
+    <div class="section-tag">Stay in Style</div>
+    <h2 class="section-title">Join the Inner Circle</h2>
+    <p class="section-sub" style="margin-top:10px;">Exclusive access to new collections and member-only offers.</p>
+    <div class="newsletter-form">
+      <input id="newsletterEmail" type="email" class="newsletter-input" placeholder="Your email address">
+      <button class="btn btn-gold" onclick="subscribeNewsletter('newsletterEmail')">Subscribe</button>
+    </div>
+    <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">MAISON <span>REINE</span></a>
+      <p class="footer-desc">Luxury fashion that honors your individuality. Crafted with passion, designed for the modern woman.</p>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-youtube"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Collections</h5>
+      <a href="shop.html?cat=kurti">Kurtis</a>
+      <a href="shop.html?cat=saree">Sarees</a>
+      <a href="shop.html?cat=western">Western Wear</a>
+      <a href="shop.html">New Arrivals</a>
+      <a href="shop.html">Sale</a>
+    </div>
+    <div class="footer-col">
+      <h5>Information</h5>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="#">Size Guide</a>
+      <a href="#">Care Instructions</a>
+      <a href="#">Sustainability</a>
+    </div>
+    <div class="footer-col">
+      <h5>Customer Care</h5>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Return Policy</a>
+      <a href="#">Track Order</a>
+      <a href="#">FAQ</a>
+      <a href="pages/login.html">My Account</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison Reine. All rights reserved. Designed with ♥ in India.</span>
+    <div class="footer-payments">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fab fa-google-pay"></i>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div class="cart-title">Shopping Bag <span id="cartItemCount">(0)</span></div>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBodyEl"></div>
+  <div class="cart-foot">
+    <div class="cart-row"><span>Subtotal</span><span id="cartSubtotalEl">₹0</span></div>
+    <div class="cart-row"><span>Shipping</span><span>Free</span></div>
+    <div style="height:1px;background:var(--beige);margin:12px 0;"></div>
+    <div class="cart-row-total"><span>Total</span><span id="cartTotalEl">₹0</span></div>
+    <a href="pages/checkout.html" class="btn btn-gold btn-full" style="margin-bottom:10px;">Proceed to Checkout</a>
+    <button class="btn btn-outline btn-full" onclick="toggleCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeQuickView()"><i class="fas fa-times"></i></button>
+    <div class="modal-box">
+      <img class="modal-img" id="modalImg" src="" alt="">
+      <div class="modal-body">
+        <div class="detail-brand">MAISON REINE</div>
+        <h2 id="modalTitle" style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--black);margin-bottom:12px;">—</h2>
+        <div class="detail-stars" style="margin-bottom:16px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <div id="modalPrice" style="font-size:26px;font-weight:700;margin-bottom:20px;"></div>
+        <div class="option-label">Size</div>
+        <div class="size-options" style="margin-bottom:20px;">
+          <button class="size-btn active" onclick="selectSize(this)">S</button>
+          <button class="size-btn" onclick="selectSize(this)">M</button>
+          <button class="size-btn" onclick="selectSize(this)">L</button>
+          <button class="size-btn" onclick="selectSize(this)">XL</button>
+        </div>
+        <button class="btn btn-gold btn-full" style="margin-bottom:10px;" onclick="addFromModal()">Add to Bag</button>
+        <button class="btn btn-outline btn-full" onclick="detailFromModal()">View Full Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Trending
+  const trending = PRODUCTS.filter(p => p.badge).slice(0, 8);
+  document.getElementById('trendingGrid').innerHTML = trending.map(productCardHTML).join('');
+
+  // Carousel
+  const best = [...PRODUCTS].sort((a,b) => b.rating - a.rating).slice(0, 10);
+  document.getElementById('carouselTrack').innerHTML = best.map(p =>
+    `<div class="carousel-item">${productCardHTML(p)}</div>`
+  ).join('');
+});
+</script>
+</body>
+</html>

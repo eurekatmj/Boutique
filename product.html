@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li><a href="shop.html" id="nav-shop">Collections</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="showToast('Search coming soon!')"><i class="fas fa-search"></i></button>
+      <button class="nav-icon"><i class="far fa-heart"></i></button>
+      <button class="nav-icon cart-icon-btn" onclick="toggleCart()">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="detail-breadcrumb" id="detailBreadcrumb" style="padding:20px 60px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;background:var(--white);border-bottom:1px solid var(--beige);color:var(--warm-gray);">
+  <a href="index.html" style="color:var(--warm-gray);">Home</a> &rsaquo;
+  <a href="shop.html" style="color:var(--warm-gray);">Collections</a> &rsaquo;
+  <span id="breadCat" style="color:var(--gold);">—</span>
+</div>
+
+<!-- DETAIL LAYOUT -->
+<div class="detail-layout">
+  <!-- GALLERY -->
+  <div class="detail-gallery">
+    <img class="gallery-main" id="galleryMain" src="" alt="Product" loading="lazy">
+    <div class="gallery-thumbs" id="galleryThumbs"></div>
+  </div>
+
+  <!-- INFO -->
+  <div class="detail-info">
+    <div class="detail-brand">MAISON REINE</div>
+    <h1 class="detail-title" id="detailTitle">—</h1>
+
+    <div class="detail-rating">
+      <div class="detail-stars" id="detailStars"></div>
+      <span class="detail-review-count">4.5 · 128 reviews</span>
+    </div>
+
+    <div class="detail-price" id="detailPrice"></div>
+    <div class="detail-saving" id="detailSaving"></div>
+
+    <div class="detail-divider"></div>
+
+    <div class="option-label">Select Size</div>
+    <div class="size-options" id="sizeOptions">
+      <button class="size-btn active" onclick="selectSize(this)">XS</button>
+      <button class="size-btn" onclick="selectSize(this)">S</button>
+      <button class="size-btn" onclick="selectSize(this)">M</button>
+      <button class="size-btn" onclick="selectSize(this)">L</button>
+      <button class="size-btn" onclick="selectSize(this)">XL</button>
+      <button class="size-btn out">XXL</button>
+    </div>
+
+    <div class="option-label">Color</div>
+    <div class="color-dots" style="margin-bottom:24px;">
+      <div class="color-swatch active" style="background:#C9A96E;"></div>
+      <div class="color-swatch" style="background:#1a1a1a;"></div>
+      <div class="color-swatch" style="background:#8B2635;"></div>
+      <div class="color-swatch" style="background:#2C5F4A;"></div>
+    </div>
+
+    <div class="option-label">Quantity</div>
+    <div class="qty-row">
+      <div class="qty-selector">
+        <button class="qty-btn" onclick="changeQty(-1)">−</button>
+        <input type="number" class="qty-num" id="qtyNum" value="1" min="1" max="10">
+        <button class="qty-btn" onclick="changeQty(1)">+</button>
+      </div>
+      <span style="font-size:12px;color:var(--warm-gray);">Only 7 left in stock</span>
+    </div>
+
+    <div class="detail-ctas">
+      <button class="btn btn-outline" onclick="addDetailToCart()"><i class="fas fa-shopping-bag" style="margin-right:8px;"></i>Add to Cart</button>
+      <button class="btn btn-gold">Buy Now</button>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-item"><i class="fas fa-truck"></i> Free delivery ₹2999+</div>
+      <div class="feature-item"><i class="fas fa-undo"></i> Easy 30-day returns</div>
+      <div class="feature-item"><i class="fas fa-shield-alt"></i> 100% authentic</div>
+      <div class="feature-item"><i class="fas fa-tag"></i> Best price guaranteed</div>
+    </div>
+
+    <div class="detail-divider"></div>
+
+    <div>
+      <h3 style="font-size:20px;font-family:'Cormorant Garamond',serif;color:var(--black);margin-bottom:12px;">Product Description</h3>
+      <p id="detailDesc" style="font-size:13px;color:var(--warm-gray);line-height:2;">
+        Elegantly crafted from premium quality fabric, this piece embodies the perfect balance of tradition and modernity.
+        Each thread tells a story of meticulous craftsmanship, designed for the woman who commands attention wherever she goes.
+      </p>
+    </div>
+
+    <div class="detail-divider"></div>
+
+    <!-- CUSTOMER REVIEWS -->
+    <div>
+      <h3 style="font-size:24px;font-family:'Cormorant Garamond',serif;color:var(--black);margin-bottom:24px;">Customer Reviews</h3>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="padding:20px;background:var(--cream);">
+          <div style="display:flex;gap:3px;color:var(--gold);font-size:12px;margin-bottom:8px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--charcoal);margin-bottom:8px;">"Absolutely gorgeous! The fabric quality is exceptional and it fits beautifully."</p>
+          <div style="font-size:11px;color:var(--warm-gray);">— Priya S., Mumbai · Verified Purchase</div>
+        </div>
+        <div style="padding:20px;background:var(--cream);">
+          <div style="display:flex;gap:3px;color:var(--gold);font-size:12px;margin-bottom:8px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--charcoal);margin-bottom:8px;">"Delivery was quick and the packaging was premium. Loved every bit of it."</p>
+          <div style="font-size:11px;color:var(--warm-gray);">— Reena K., Delhi · Verified Purchase</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED PRODUCTS -->
+<section class="section" style="background:var(--cream);padding-top:60px;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">You May Also Like</div>
+      <h2 class="section-title">Related Products</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="grid-auto" id="relatedGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">MAISON <span>REINE</span></a>
+      <p class="footer-desc">Luxury fashion that honors your individuality.</p>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Collections</h5><a href="shop.html">All Products</a><a href="shop.html?cat=kurti">Kurtis</a><a href="shop.html?cat=saree">Sarees</a></div>
+    <div class="footer-col"><h5>Information</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h5>Help</h5><a href="#">Size Guide</a><a href="#">Returns</a><a href="#">FAQ</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison Reine. All rights reserved.</span>
+    <div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div class="cart-title">Shopping Bag <span id="cartItemCount">(0)</span></div>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBodyEl"></div>
+  <div class="cart-foot">
+    <div class="cart-row"><span>Total</span><span id="cartSubtotalEl">₹0</span></div>
+    <div style="height:1px;background:var(--beige);margin:12px 0;"></div>
+    <div class="cart-row-total"><span>Grand Total</span><span id="cartTotalEl">₹0</span></div>
+    <a href="pages/checkout.html" class="btn btn-gold btn-full" style="margin-bottom:10px;">Checkout</a>
+    <button class="btn btn-outline btn-full" onclick="toggleCart()">Continue</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/script.js"></script>
+<script>
+let currentProduct = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const id = localStorage.getItem('selectedProduct') || '1';
+  const p = getProductById(parseInt(id));
+  if (!p) { window.location.href = 'shop.html'; return; }
+  currentProduct = p;
+
+  document.title = `${p.name} — MAISON REINE`;
+  document.getElementById('detailTitle').textContent = p.name;
+  document.getElementById('breadCat').textContent = p.cat.charAt(0).toUpperCase() + p.cat.slice(1);
+  document.getElementById('detailStars').innerHTML = renderStars(p.rating);
+
+  const saving = p.oldPrice ? Math.round((p.oldPrice - p.price) / p.oldPrice * 100) : 0;
+  document.getElementById('detailPrice').innerHTML = `₹${p.price.toLocaleString()}${p.oldPrice ? `<span class="detail-price-old">₹${p.oldPrice.toLocaleString()}</span>` : ''}`;
+  if (saving > 0) document.getElementById('detailSaving').textContent = `You save ₹${(p.oldPrice - p.price).toLocaleString()} · ${saving}% off`;
+
+  // Gallery
+  document.getElementById('galleryMain').src = p.img;
+  const extras = [
+    p.img,
+    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=200&q=60',
+    'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=200&q=60',
+    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=200&q=60',
+  ];
+  document.getElementById('galleryThumbs').innerHTML = extras.map((u, i) =>
+    `<img class="gallery-thumb ${i===0?'active':''}" src="${u}" alt="thumb ${i+1}" onclick="switchGallery(this,'${u}')" loading="lazy">`
+  ).join('');
+
+  // Related
+  const related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id).slice(0, 4);
+  document.getElementById('relatedGrid').innerHTML = related.map(productCardHTML).join('');
+});
+
+function addDetailToCart() {
+  if (!currentProduct) return;
+  const qty = parseInt(document.getElementById('qtyNum').value) || 1;
+  const size = document.querySelector('#sizeOptions .size-btn.active')?.textContent || 'M';
+  for (let i = 0; i < qty; i++) addToCart(currentProduct.id, 1, size);
+}
+</script>
+</body>
+</html>

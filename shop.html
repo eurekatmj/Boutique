@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collections — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li>
+        <a href="shop.html" id="nav-shop">Collections</a>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <h4>Women</h4>
+            <a href="shop.html?cat=kurti">Kurtis</a>
+            <a href="shop.html?cat=saree">Sarees</a>
+            <a href="shop.html?cat=western">Western Wear</a>
+          </div>
+          <div class="mega-col">
+            <h4>Men</h4>
+            <a href="shop.html">Formal Shirts</a>
+            <a href="shop.html">Ethnic Wear</a>
+          </div>
+          <div class="mega-col">
+            <h4>Trending</h4>
+            <a href="shop.html">New Arrivals</a>
+            <a href="shop.html">Best Sellers</a>
+            <a href="shop.html">Sale Items</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon" onclick="showToast('Search coming soon!')" title="Search"><i class="fas fa-search"></i></button>
+      <button class="nav-icon" title="Wishlist"><i class="far fa-heart"></i></button>
+      <button class="nav-icon cart-icon-btn" onclick="toggleCart()" title="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Collections</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE BANNER -->
+<div class="page-banner">
+  <div>
+    <div class="breadcrumb">Home &rsaquo; <span>Collections</span></div>
+    <h1>Our <em>Collections</em></h1>
+  </div>
+</div>
+
+<!-- SHOP LAYOUT -->
+<div class="shop-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="filter-group">
+      <div class="filter-title" onclick="toggleFilterGroup(this)">Category <i class="fas fa-chevron-down"></i></div>
+      <div>
+        <label class="filter-option"><input type="checkbox" id="f-kurti" onchange="applyFilters()"> Kurtis</label>
+        <label class="filter-option"><input type="checkbox" id="f-saree" onchange="applyFilters()"> Sarees</label>
+        <label class="filter-option"><input type="checkbox" id="f-western" onchange="applyFilters()"> Western Dresses</label>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-title" onclick="toggleFilterGroup(this)">Price Range <i class="fas fa-chevron-down"></i></div>
+      <div class="price-range">
+        <input type="range" class="price-slider" id="priceSlider" min="500" max="3000" value="3000" step="100" oninput="updatePrice(this)">
+        <div class="price-labels"><span>₹500</span><span id="priceValue">₹3,000</span></div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-title" onclick="toggleFilterGroup(this)">Size <i class="fas fa-chevron-down"></i></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+        <label class="filter-option" style="border:1px solid var(--beige);padding:4px 12px;font-size:12px;"><input type="checkbox" style="display:none"> XS</label>
+        <label class="filter-option" style="border:1px solid var(--beige);padding:4px 12px;font-size:12px;"><input type="checkbox" style="display:none"> S</label>
+        <label class="filter-option" style="border:1px solid var(--beige);padding:4px 12px;font-size:12px;"><input type="checkbox" style="display:none"> M</label>
+        <label class="filter-option" style="border:1px solid var(--beige);padding:4px 12px;font-size:12px;"><input type="checkbox" style="display:none"> L</label>
+        <label class="filter-option" style="border:1px solid var(--beige);padding:4px 12px;font-size:12px;"><input type="checkbox" style="display:none"> XL</label>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-title" onclick="toggleFilterGroup(this)">Color <i class="fas fa-chevron-down"></i></div>
+      <div class="color-swatches" style="margin-top:8px;">
+        <div class="color-swatch active" style="background:#C9A96E;" title="Gold"></div>
+        <div class="color-swatch" style="background:#1a1a1a;" title="Black"></div>
+        <div class="color-swatch" style="background:#8B2635;" title="Deep Red"></div>
+        <div class="color-swatch" style="background:#2C5F4A;" title="Forest Green"></div>
+        <div class="color-swatch" style="background:#4A6FA5;" title="Navy"></div>
+        <div class="color-swatch" style="background:#F5E6D3;" title="Cream"></div>
+        <div class="color-swatch" style="background:#C4A3BD;" title="Lavender"></div>
+        <div class="color-swatch" style="background:#E07B54;" title="Rust"></div>
+      </div>
+    </div>
+    <div class="filter-group">
+      <div class="filter-title" onclick="toggleFilterGroup(this)">Brand <i class="fas fa-chevron-down"></i></div>
+      <div>
+        <label class="filter-option"><input type="checkbox" checked> Maison Reine</label>
+        <label class="filter-option"><input type="checkbox"> Exclusif</label>
+        <label class="filter-option"><input type="checkbox"> Artisans</label>
+      </div>
+    </div>
+    <button class="btn btn-gold btn-full" onclick="applyFilters()" style="margin-top:8px;">Apply Filters</button>
+  </aside>
+
+  <!-- PRODUCTS MAIN -->
+  <div class="shop-main">
+    <div class="shop-toolbar">
+      <div class="result-count"><strong id="shopCount">24</strong> Products</div>
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+        <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+          <option>Sort: Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest First</option>
+          <option>Most Popular</option>
+        </select>
+        <div class="view-toggle">
+          <button class="view-btn active" onclick="setView('grid',this)"><i class="fas fa-th"></i></button>
+          <button class="view-btn" onclick="setView('list',this)"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-auto" id="shopGrid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));"></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <a class="footer-logo" href="index.html">MAISON <span>REINE</span></a>
+      <p class="footer-desc">Luxury fashion that honors your individuality. Crafted with passion.</p>
+      <div class="social-links">
+        <a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Collections</h5><a href="shop.html?cat=kurti">Kurtis</a><a href="shop.html?cat=saree">Sarees</a><a href="shop.html?cat=western">Western</a></div>
+    <div class="footer-col"><h5>Information</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="#">Size Guide</a></div>
+    <div class="footer-col"><h5>Customer Care</h5><a href="#">Shipping Policy</a><a href="#">Returns</a><a href="#">FAQ</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Maison Reine. All rights reserved.</span>
+    <div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div class="cart-title">Shopping Bag <span id="cartItemCount">(0)</span></div>
+    <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-body" id="cartBodyEl"></div>
+  <div class="cart-foot">
+    <div class="cart-row"><span>Subtotal</span><span id="cartSubtotalEl">₹0</span></div>
+    <div class="cart-row"><span>Shipping</span><span>Free</span></div>
+    <div style="height:1px;background:var(--beige);margin:12px 0;"></div>
+    <div class="cart-row-total"><span>Total</span><span id="cartTotalEl">₹0</span></div>
+    <a href="pages/checkout.html" class="btn btn-gold btn-full" style="margin-bottom:10px;">Checkout</a>
+    <button class="btn btn-outline btn-full" onclick="toggleCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-wrap">
+    <button class="modal-close" onclick="closeQuickView()"><i class="fas fa-times"></i></button>
+    <div class="modal-box">
+      <img class="modal-img" id="modalImg" src="" alt="">
+      <div class="modal-body">
+        <div class="detail-brand">MAISON REINE</div>
+        <h2 id="modalTitle" style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:12px;"></h2>
+        <div class="detail-stars" style="margin-bottom:16px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <div id="modalPrice" style="font-size:26px;font-weight:700;margin-bottom:20px;"></div>
+        <div class="size-options" style="margin-bottom:20px;">
+          <button class="size-btn active" onclick="selectSize(this)">S</button>
+          <button class="size-btn" onclick="selectSize(this)">M</button>
+          <button class="size-btn" onclick="selectSize(this)">L</button>
+          <button class="size-btn" onclick="selectSize(this)">XL</button>
+        </div>
+        <button class="btn btn-gold btn-full" style="margin-bottom:10px;" onclick="addFromModal()">Add to Bag</button>
+        <button class="btn btn-outline btn-full" onclick="detailFromModal()">View Full Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Check URL param
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get('cat');
+  if (cat && ['kurti','saree','western'].includes(cat)) {
+    const cb = document.getElementById('f-' + cat);
+    if (cb) cb.checked = true;
+  }
+  applyFilters();
+});
+</script>
+</body>
+</html>

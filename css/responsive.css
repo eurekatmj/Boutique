@@ -1,0 +1,109 @@
+/* ============================================================
+   MAISON REINE — Responsive Stylesheet
+   responsive.css
+============================================================ */
+
+/* ── Tablet ≤ 1100px ───────────────────────────────────── */
+@media (max-width: 1100px) {
+  .container { padding: 0 24px; }
+  .categories-grid  { grid-template-columns: repeat(2, 1fr); }
+  .team-grid        { grid-template-columns: repeat(2, 1fr); }
+  .footer-top       { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .about-story,
+  .contact-layout   { grid-template-columns: 1fr; }
+  .about-img        { height: 400px; }
+  .editorial-section{ grid-template-columns: 1fr; }
+  .editorial-body   { padding: 60px 40px; }
+  .detail-layout    { grid-template-columns: 1fr; }
+  .cart-page-layout,
+  .checkout-layout  { grid-template-columns: 1fr; }
+  .order-summary,
+  .checkout-summary { position: static; }
+}
+
+/* ── Mobile ≤ 768px ────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* NAV */
+  .navbar           { padding: 0 20px; }
+  .nav-links        { display: none; }
+  .hamburger        { display: flex; }
+  .nav-actions .nav-icon:not(.cart-icon-btn) { display: none; }
+
+  /* HERO */
+  .hero-right       { display: none; }
+  .hero-content     { padding: 0 24px; max-width: 100%; }
+  .hero h1          { font-size: 44px; }
+  .hero-scroll      { display: none; }
+
+  /* SECTIONS */
+  .section          { padding: 60px 0; }
+  .categories-section,
+  .products-section,
+  .reviews-section,
+  .newsletter-section { padding: 60px 20px; }
+  .categories-grid  { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .reviews-grid     { grid-template-columns: 1fr; }
+  .values-grid      { grid-template-columns: 1fr; }
+  .team-grid        { grid-template-columns: 1fr 1fr; }
+
+  /* SHOP */
+  .shop-layout      { grid-template-columns: 1fr; }
+  .sidebar          { display: none; }
+  .shop-main        { padding: 20px; }
+  .page-banner      { padding: 0 24px; height: 220px; }
+  .page-banner h1   { font-size: 38px; }
+
+  /* DETAIL */
+  .detail-info      { padding: 24px 20px; }
+  .detail-title     { font-size: 32px; }
+  .gallery-main     { height: 360px; }
+  .feature-grid     { grid-template-columns: 1fr; }
+
+  /* ABOUT */
+  .about-content    { padding: 48px 24px; }
+
+  /* CONTACT */
+  .contact-info,
+  .contact-form-wrap{ padding: 48px 24px; }
+
+  /* FOOTER */
+  .footer-top       { grid-template-columns: 1fr; gap: 32px; }
+  footer            { padding: 60px 24px 30px; }
+
+  /* CART */
+  .cart-page-layout { padding: 40px 20px; }
+  .checkout-layout  { padding: 40px 20px; }
+
+  /* CAROUSEL */
+  .carousel-inner-header,
+  .carousel-nav     { padding: 40px 20px 0; }
+  .carousel-track   { padding: 0 20px; }
+
+  /* MODAL */
+  .modal-box        { grid-template-columns: 1fr; }
+  .modal-img        { max-height: 280px; }
+  .modal-body       { max-height: 300px; padding: 28px; }
+
+  /* CART DRAWER */
+  .cart-drawer      { width: 100%; right: -100%; }
+
+  /* AUTH */
+  .auth-box         { padding: 40px 28px; }
+  .form-row         { grid-template-columns: 1fr; }
+
+  /* EDITORIAL */
+  .editorial-body   { padding: 48px 24px; }
+}
+
+/* ── Small mobile ≤ 480px ──────────────────────────────── */
+@media (max-width: 480px) {
+  .hero h1          { font-size: 36px; }
+  .hero-ctas        { flex-direction: column; }
+  .btn              { padding: 12px 24px; font-size: 10px; }
+  .categories-grid  { grid-template-columns: 1fr; }
+  .team-grid        { grid-template-columns: 1fr; }
+  .newsletter-form  { flex-direction: column; }
+  .newsletter-input { border-right: 1px solid rgba(201,169,110,.3); }
+  .detail-ctas      { flex-direction: column; }
+  .size-options     { gap: 6px; }
+}

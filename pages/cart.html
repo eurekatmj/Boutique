@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart — MAISON REINE</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="topbar">✦ New Collection 2026 — Free Shipping on Orders Over ₹2999 ✦</div>
+<nav class="navbar" id="mainNav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">MAISON <span>REINE</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../shop.html">Collections</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon cart-icon-btn" onclick="showToast('You are already on the cart page!')">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="hamburger" onclick="openMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+  <a href="../index.html">Home</a><a href="../shop.html">Collections</a>
+</div>
+
+<div class="page-banner" style="height:200px;">
+  <div>
+    <div class="breadcrumb">Home &rsaquo; <span>Shopping Cart</span></div>
+    <h1 style="font-size:48px;">Your <em>Cart</em></h1>
+  </div>
+</div>
+
+<div class="cart-page-layout">
+  <!-- CART TABLE -->
+  <div>
+    <div id="cartPageEmpty" style="display:none;text-align:center;padding:80px 0;">
+      <i class="fas fa-shopping-bag" style="font-size:56px;color:var(--gold-light);margin-bottom:20px;display:block;"></i>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;margin-bottom:12px;">Your bag is empty</h2>
+      <p style="font-size:14px;color:var(--warm-gray);margin-bottom:32px;">Looks like you haven't added anything yet.</p>
+      <a href="../shop.html" class="btn btn-gold">Continue Shopping</a>
+    </div>
+    <table class="cart-table" id="cartTable">
+      <thead>
+        <tr>
+          <th style="width:80px;"></th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="cartTableBody"></tbody>
+    </table>
+    <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap;">
+      <a href="../shop.html" class="btn btn-outline"><i class="fas fa-arrow-left" style="margin-right:8px;"></i> Continue Shopping</a>
+      <button class="btn btn-outline" onclick="clearCart();renderCartPage();">Clear Cart</button>
+    </div>
+  </div>
+
+  <!-- ORDER SUMMARY -->
+  <div class="order-summary">
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--black);margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--beige);">Order Summary</h3>
+    <div class="order-row"><span>Subtotal</span><span id="pgSubtotal">₹0</span></div>
+    <div class="order-row"><span>Shipping</span><span style="color:#27ae60;">Free</span></div>
+    <div class="order-row"><span>Tax (5% GST)</span><span id="pgTax">₹0</span></div>
+    <div class="order-total"><span>Total</span><span id="pgTotal">₹0</span></div>
+    <div style="margin-bottom:20px;">
+      <label class="form-label">Promo Code</label>
+      <div style="display:flex;gap:0;">
+        <input type="text" class="form-input" placeholder="WELCOME10" style="border-right:none;" id="promoInput">
+        <button class="btn btn-black btn-sm" onclick="applyPromo()">Apply</button>
+      </div>
+    </div>
+    <a href="checkout.html" class="btn btn-gold btn-full">Proceed to Checkout</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i><span id="toastMsg">Done!</span></div>
+
+<footer style="background:var(--off-black);padding:40px 60px;margin-top:40px;">
+  <div class="footer-bottom" style="border-top:none;padding-top:0;">
+    <span>© 2026 Maison Reine. All rights reserved.</span>
+    <div class="footer-payments"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i></div>
+  </div>
+</footer>
+
+<script src="../js/products.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/script.js"></script>
+<script>
+function renderCartPage() {
+  const tbody = document.getElementById('cartTableBody');
+  const emptyEl = document.getElementById('cartPageEmpty');
+  const tableEl = document.getElementById('cartTable');
+
+  if (cart.length === 0) {
+    emptyEl.style.display = 'block';
+    tableEl.style.display = 'none';
+  } else {
+    emptyEl.style.display = 'none';
+    tableEl.style.display = 'table';
+    tbody.innerHTML = cart.map(c => `
+      <tr>
+        <td><img class="cart-table-img" src="${c.img}" alt="${c.name}"></td>
+        <td>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;margin-bottom:4px;">${c.name}</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Size: ${c.size}</div>
+        </td>
+        <td style="font-size:15px;font-weight:600;">₹${c.price.toLocaleString()}</td>
+        <td>
+          <div class="qty-selector" style="width:fit-content;">
+            <button class="qty-btn" onclick="updateQty(${c.id},'${c.size}',-1);renderCartPage();">−</button>
+            <input type="number" class="qty-num" value="${c.qty}" readonly>
+            <button class="qty-btn" onclick="updateQty(${c.id},'${c.size}',1);renderCartPage();">+</button>
+          </div>
+        </td>
+        <td style="font-size:16px;font-weight:700;">₹${(c.price*c.qty).toLocaleString()}</td>
+        <td><button onclick="removeFromCart(${c.id},'${c.size}');renderCartPage();" style="background:none;border:none;color:var(--warm-gray);cursor:pointer;font-size:18px;"><i class="fas fa-trash-alt"></i></button></td>
+      </tr>`).join('');
+  }
+  const sub = getCartTotal();
+  const tax = Math.round(sub * 0.05);
+  document.getElementById('pgSubtotal').textContent = `₹${sub.toLocaleString()}`;
+  document.getElementById('pgTax').textContent = `₹${tax.toLocaleString()}`;
+  document.getElementById('pgTotal').textContent = `₹${(sub + tax).toLocaleString()}`;
+}
+function applyPromo() {
+  const val = document.getElementById('promoInput').value.toUpperCase();
+  if (val === 'WELCOME10') showToast('Promo applied! 10% off your order ✨');
+  else showToast('Invalid promo code. Try WELCOME10');
+}
+document.addEventListener('DOMContentLoaded', renderCartPage);
+</script>
+</body>
+</html>
